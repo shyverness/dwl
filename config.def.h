@@ -119,7 +119,6 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
 /* commands */
 static const char *cmd_term[] = { "alacritty", NULL };
 static const char *cmd_drun[] = { "wmenu-run", NULL };
-static const char *cmd_run[]  = { "rofi -show drun", NULL };
 static const char *cmd_firefox[] = { "firefox", NULL };
 static const char *cmd_pavucontrol[] = { "pavucontrol", NULL };
 static const char *cmd_bluetooth[] = { "blueman-manager", NULL };
@@ -131,7 +130,7 @@ static const Key keys[] = {
 	 * Spawn commands
 	 */
 	{ MODKEY,                    XKB_KEY_r,                     spawn,            {.v = cmd_drun} },
-	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_r,                     spawn,            {.v = cmd_run} },
+	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_r,                     spawn,            SHCMD("rofi -show drun") },
 	{ MODKEY,                    XKB_KEY_t,                     spawn,            {.v = cmd_term} },
 	{ MODKEY,                    XKB_KEY_w,                     spawn,            {.v = cmd_firefox} },
 
