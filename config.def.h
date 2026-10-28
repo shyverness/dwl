@@ -161,7 +161,7 @@ static const Key keys[] = {
 	{MODKEY,                     XKB_KEY_k,                spawn,            SHCMD("st rmpc")},
 	{MODKEY,                     XKB_KEY_Page_Up,          spawn,            {.v = cmd_pavucontrol}},
 	{MODKEY,                     XKB_KEY_Page_Down,        spawn,            {.v = cmd_bluetooth}},
-	{MODKEY,                     XKB_KEY_d,                spawn,            SHCMD("xdotool type --clearmodifiers \"$(date '+%Y.%m.%d')\"")},
+	{MODKEY,                     XKB_KEY_d,                spawn,            SHCMD("wtype \"$(date '+%Y.%m.%d')\"")},
 
 	// { MODKEY,                    XKB_KEY_i,                incnmaster,       {.i = +1} },
 	// { MODKEY,                    XKB_KEY_d,                incnmaster,       {.i = -1} },
