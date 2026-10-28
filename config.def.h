@@ -167,6 +167,8 @@ static const Key keys[] = {
 	// { MODKEY,                    XKB_KEY_d,                incnmaster,       {.i = -1} },
 	{ MODKEY,                    XKB_KEY_n,                focusstack,       {.i = +1} },
 	{ MODKEY,                    XKB_KEY_e,                focusstack,       {.i = -1} },
+	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_n,                movestack,        {.i = +1} },
+	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_e,                movestack,        {.i = -1} },
 	{ MODKEY,                    XKB_KEY_h,                setmfact,         {.f = -0.05f} },
 	{ MODKEY,                    XKB_KEY_i,                setmfact,         {.f = +0.05f} },
 	{ MODKEY,                    XKB_KEY_Return,           zoom,             {0} }, // move window to top of stack
