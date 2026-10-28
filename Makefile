@@ -1,6 +1,8 @@
 .POSIX:
 .SUFFIXES:
 
+.PHONY: all clean config.h dwl
+
 include config.mk
 
 # flags for compiling
