@@ -31,8 +31,9 @@ static const Rule rules[] = {
 /* layout(s) */
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },
+	{ "[]=",      tile   },
 	{ "><>",      NULL },    /* no layout function means floating behavior */
+	{ "^[0",      bstack },    /* no layout function means floating behavior */
 };
 
 /* monitors */
@@ -176,6 +177,7 @@ static const Key keys[] = {
 	{ MODKEY,                    XKB_KEY_c,                killclient,       {0} },
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_t,                setlayout,        {.v = &layouts[0]} },
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_f,                setlayout,        {.v = &layouts[1]} },
+	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_u,                setlayout,        {.v = &layouts[3]} },
 	{ MODKEY,                    XKB_KEY_v,                togglefloating,   {0} },
 	{ MODKEY,                    XKB_KEY_f,                togglefullscreen, {0} },
 	{ MODKEY,                    XKB_KEY_parenright,       view,             {.ui = ~0} },
